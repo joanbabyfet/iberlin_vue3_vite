@@ -18,4 +18,4 @@ npm run dev
 Alan
 
 ## LICENSE
-[MIT License](https://github.com/joanbabyfet/iberlin/blob/master/LICENSE)
+[MIT License](https://github.com/joanbabyfet/iberlin_vue3_vite/blob/master/LICENSE)
