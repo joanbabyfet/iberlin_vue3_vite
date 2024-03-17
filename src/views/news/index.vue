@@ -30,9 +30,5 @@
 <script setup>
 import useNews from '@/composables/useNews'
 
-let data = {
-    'page': 1,
-    'page_size': 10,
-}
-const { list, total, currentPage, pageSize, handleCurrentChange, handleSizeChange } = useNews(data)
+const { list, total, currentPage, pageSize, handleCurrentChange, handleSizeChange } = useNews()
 </script>

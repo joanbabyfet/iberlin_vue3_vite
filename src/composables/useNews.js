@@ -6,13 +6,13 @@ export default function useNews(data) {
     const list = ref([]) 
     const total = ref(0) //总条数
     const currentPage = ref(1) //第几页
-    const pageSize = ref(10) //每页显示几条
-    let params = data ? data : {
-        'page': currentPage.value,
-        'page_size': pageSize.value,
-    }
-
+    const pageSize = ref(2) //每页显示几条
+    
     async function getData() {
+        let params = data ? data : {
+            'page': currentPage.value,
+            'page_size': pageSize.value,
+        }
         await getNews({ params: JSON.stringify(params) }).then((res) => {
             console.log(res.data)
             if(res.data.code == 0) {
