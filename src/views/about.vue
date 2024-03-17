@@ -13,3 +13,11 @@
         <div id="mainFooterSide"></div>
     </div>
 </template>
+
+<script setup>
+import { inject } from 'vue'
+
+//获取全局变量
+const message = inject('message')
+console.log(message)
+</script>

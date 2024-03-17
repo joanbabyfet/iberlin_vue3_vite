@@ -7,6 +7,6 @@
 </template>
 
 <script setup>
-import HomeBanner from "@/components/HomeBanner.vue";
-import HomeNews from "@/components/HomeNews.vue";
+import HomeBanner from "@/components/HomeBanner.vue"
+import HomeNews from "@/components/HomeNews.vue"
 </script>

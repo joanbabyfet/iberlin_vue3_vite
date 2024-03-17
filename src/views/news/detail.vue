@@ -21,9 +21,14 @@
 <script setup>
 import useNewsDetail from '@/composables/useNewsDetail'
 import { useRoute } from 'vue-router'
+import { inject } from 'vue'
 
 const route = useRoute()
 const { info } = useNewsDetail({
     params: `{"id": ${route.params.id}}`
 })
+
+//获取全局变量
+const message = inject('message')
+console.log(message)
 </script>
