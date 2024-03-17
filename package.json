@@ -20,7 +20,10 @@
     "vue": "^3.4.21",
     "vue-cookies": "^1.8.3",
     "vue-i18n": "^9.10.1",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "xgplayer": "^3.0.14",
+    "xgplayer-flv": "^3.0.14",
+    "xgplayer-hls": "^3.0.14"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",

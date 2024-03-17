@@ -1,5 +1,6 @@
 <template>
     <div id="homeVisual">
+		<!-- loop可循环轮播，autoplay可自动播放 -->
         <swiper
 			:modules="modules"
 			:loop="true"
@@ -10,7 +11,6 @@
 			:pagination="{ clickable: true }"
 			:scrollbar="{ draggable: true }"
 		>
-			<!-- loop可循环轮播，autoplay可自动播放 -->
 			<swiper-slide><img src="@/assets/images/banner01.jpg"></swiper-slide>
 			<swiper-slide><img src="@/assets/images/banner02.jpg"></swiper-slide>
 		</swiper>
