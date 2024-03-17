@@ -2,12 +2,10 @@
 import axios from '../utils/request'
 
 //获取新闻列表
-export const getNews = (params) => axios('/v1/example/index', { 
-    method: 'GET',
+export const getNews = (params) => axios.get('/v1/example/index', {
     params: params,
 })
 //获取新闻详情
-export const getNewsDetail = (params) => axios('/v1/example/show', {
-    method: 'GET',
+export const getNewsDetail = (params) => axios.get('/v1/example/show', {
     params: params,
 })

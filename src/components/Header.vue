@@ -22,10 +22,15 @@
 
 <script setup>
 import { useI18n } from "vue-i18n"
+import cookies from 'vue-cookies'
+
 const { locale } = useI18n()
 //切換語言
 function setLang(lang) {
     locale.value = lang //实时切换
     localStorage.setItem('language', lang)
+    //sessionStorage.setItem('language', lang)
+    //cookies.config("1m") //设置过期时间1个月
+    //cookies.set('language', lang)
 }
 </script>

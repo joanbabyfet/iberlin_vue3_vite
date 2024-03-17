@@ -24,9 +24,10 @@ import { useRoute } from 'vue-router'
 import { inject } from 'vue'
 
 const route = useRoute()
-const { info } = useNewsDetail({
-    params: `{"id": ${route.params.id}}`
-})
+let data = {
+    'id': route.params.id,
+}
+const { info } = useNewsDetail(data)
 
 //获取全局变量
 const message = inject('message')

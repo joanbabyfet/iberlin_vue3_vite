@@ -6,21 +6,21 @@
                 <div class="mainTitle titleBrand"><img src="@/assets/images/visual/pageTitle/news.png" width="200" height="35" /></div>
                 <div class="newsList">
                     <ul>
-                        <li v-for="item in news" :key="item.id">
+                        <li v-for="item in dataList" :key="item.id">
                             <router-link :to="`/news/${item.id}`">{{ item.name }}</router-link>
                         </li>
                     </ul>
                 </div>
                     <el-pagination
-      v-model:currentPage="currentPage4"
-      :page-sizes="[100, 200, 300, 400]"
-      :page-size="100"
-      layout="total, sizes, prev, pager, next, jumper"
-      :total="400"
-      @size-change="handleSizeChange"
-      @current-change="handleCurrentChange"
-    >
-    </el-pagination>
+                        v-model:current-page="currentPage"
+                        v-model:page-size="pageSize"
+                        :total="total"
+                        :page-sizes="[10, 20, 30, 40]"
+                        layout="total, sizes, prev, pager, next, jumper"
+                        @current-change="handleCurrentChange"
+                        @size-change="handleSizeChange"
+                        >
+                    </el-pagination>
             </div>
         </div>
         <div id="mainFooterSide"></div>
@@ -30,14 +30,9 @@
 <script setup>
 import useNews from '@/composables/useNews'
 
-const { news } = useNews({
-    params: `{"page":1,"page_size":10}`
-})
-
-const handleSizeChange = (val) => {
-  console.log(`${val} items per page`)
+let data = {
+    'page': 1,
+    'page_size': 10,
 }
-const handleCurrentChange = (val) => {
-  console.log(`current page: ${val}`)
-}
+const { dataList, total, currentPage, pageSize, handleCurrentChange, handleSizeChange } = useNews(data)
 </script>
