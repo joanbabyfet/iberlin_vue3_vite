@@ -3,7 +3,7 @@ import { getNews } from '../api/news'
 
 //获取新闻列表
 export default function useNews(data) {
-    const dataList = ref([]) 
+    const list = ref([]) 
     const total = ref(0) //总条数
     const currentPage = ref(1) //第几页
     const pageSize = ref(10) //每页显示几条
@@ -16,7 +16,7 @@ export default function useNews(data) {
         await getNews({ params: JSON.stringify(params) }).then((res) => {
             console.log(res.data)
             if(res.data.code == 0) {
-                dataList.value = res.data.data.list
+                list.value = res.data.data.list
                 total.value = res.data.data.count
             }
         }).catch(error => {
@@ -41,7 +41,7 @@ export default function useNews(data) {
     }
 
     return {
-        dataList,
+        list,
         total,
         currentPage,
         pageSize,

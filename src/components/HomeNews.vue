@@ -3,7 +3,7 @@
         <img src="@/assets/images/titleTxNews.jpg" width="273" height="37" style="margin-bottom:14px;" />
         <img src="@/assets/images/homeNewsTitle.jpg" width="201" height="19" />
         <ul>
-            <li v-for="item in dataList" :key="item.id">
+            <li v-for="item in list" :key="item.id">
                 <!-- <router-link :to="`/news/${item.id}`">{{ _.truncate(item.name, {length: 15}) }}</router-link> -->
                 <router-link :to="`/news/${item.id}`">{{ $sliceWord(item.name, 20) }}</router-link>
             </li>
@@ -20,5 +20,5 @@ let data = {
     'page': 1,
     'page_size': 5,
 }
-const { dataList } = useNews(data)
+const { list } = useNews(data)
 </script>

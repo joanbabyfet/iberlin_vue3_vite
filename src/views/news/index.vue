@@ -6,7 +6,7 @@
                 <div class="mainTitle titleBrand"><img src="@/assets/images/visual/pageTitle/news.png" width="200" height="35" /></div>
                 <div class="newsList">
                     <ul>
-                        <li v-for="item in dataList" :key="item.id">
+                        <li v-for="item in list" :key="item.id">
                             <router-link :to="`/news/${item.id}`">{{ item.name }}</router-link>
                         </li>
                     </ul>
@@ -34,5 +34,5 @@ let data = {
     'page': 1,
     'page_size': 10,
 }
-const { dataList, total, currentPage, pageSize, handleCurrentChange, handleSizeChange } = useNews(data)
+const { list, total, currentPage, pageSize, handleCurrentChange, handleSizeChange } = useNews(data)
 </script>
