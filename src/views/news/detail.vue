@@ -20,14 +20,9 @@
 
 <script setup>
 import useNewsDetail from '@/composables/useNewsDetail'
-import { useRoute } from 'vue-router'
 import { inject } from 'vue'
 
-const route = useRoute()
-let data = {
-    'id': route.params.id,
-}
-const { info } = useNewsDetail(data)
+const { info } = useNewsDetail()
 
 //获取全局变量
 const message = inject('message')

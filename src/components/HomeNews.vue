@@ -13,12 +13,8 @@
 </template>
 
 <script setup>
-import useNews from '@/composables/useNews'
+import useHomeNews from '@/composables/useHomeNews'
 //import _ from 'lodash-es' //引入全部方法
 
-let data = {
-    'page': 1,
-    'page_size': 5,
-}
-const { list } = useNews(data)
+const { list } = useHomeNews()
 </script>
