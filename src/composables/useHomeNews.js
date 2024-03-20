@@ -12,7 +12,7 @@ export default function useHomeNews() {
         }
         await getNews({ params: JSON.stringify(data) }).then((res) => {
             console.log(res.data)
-            if(res.data.code == 0) {
+            if(res.data.code === 0) {
                 list.value = res.data.data.list
             }
         }).catch(error => {

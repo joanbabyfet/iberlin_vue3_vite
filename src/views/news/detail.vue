@@ -19,10 +19,10 @@
 </template>
 
 <script setup>
-import useNewsDetail from '@/composables/useNewsDetail'
+import useNewsInfo from '@/composables/useNewsInfo'
 import { inject } from 'vue'
 
-const { info } = useNewsDetail()
+const { info } = useNewsInfo()
 
 //获取全局变量
 const message = inject('message')

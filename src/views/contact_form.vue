@@ -9,9 +9,33 @@
         </div>
         <div id="mainContents">
           <h2> Contact US Form</h2>
+          <el-form ref="contactForm" :model="form" :rules="rules" label-width="130px">
+            <el-form-item label="Contact window" prop="name">
+              <el-input v-model="form.name" placeholder="Enter Contact window"></el-input>
+            </el-form-item>
+            <el-form-item label="Phone no" prop="mobile">
+              <el-input v-model="form.mobile" placeholder="Enter Phone no"></el-input>
+            </el-form-item>
+            <el-form-item label="Email" prop="email">
+              <el-input v-model="form.email" placeholder="Enter Email"></el-input>
+            </el-form-item>
+            <el-form-item label="Message" prop="content">
+              <el-input type="textarea" v-model="form.content" placeholder="Enter Message"></el-input>
+            </el-form-item>
+            <el-form-item>
+              <el-button type="primary" @click="submitForm">Submit</el-button>
+            </el-form-item>
+          </el-form>
         </div>
       </div>
     </div>
     <div id="mainFooterSide"></div>
   </div>
 </template>
+
+<script setup>
+import useContactForm from '@/composables/useContactForm'
+
+//頁面使用組合函数
+const { contactForm, form, submitForm, rules } = useContactForm()
+</script>
