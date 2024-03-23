@@ -30,13 +30,13 @@ export default function() {
                 //发送请求
                 submitContactForm(form.value).then(res => {
                     isDisabled.value = false
-                    if(res.data.code === 0) {
-                        ElMessage.success(res.data.msg)
+                    if(res.code === 0) {
+                        ElMessage.success(res.msg)
                         //重置表单
                         contactForm.value.resetFields()
                     }
                     else {
-                        ElMessage.error(res.data.msg)
+                        ElMessage.error(res.msg)
                     }
                 }).catch((error)=>{
                     ElMessage.error(error)
