@@ -23,7 +23,7 @@
               <el-input type="textarea" v-model="form.content" placeholder="Enter Message"></el-input>
             </el-form-item>
             <el-form-item>
-              <el-button type="primary" @click="submitForm">Submit</el-button>
+              <el-button type="primary" @click="submitForm" :disabled="isDisabled">Submit</el-button>
             </el-form-item>
           </el-form>
         </div>
@@ -37,5 +37,5 @@
 import useContactForm from '@/composables/useContactForm'
 
 //頁面使用組合函数
-const { contactForm, form, submitForm, rules } = useContactForm()
+const { contactForm, form, submitForm, rules, isDisabled } = useContactForm()
 </script>
