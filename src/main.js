@@ -17,6 +17,8 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 //引入全局方法
 import { goUrl, sliceWord } from './utils/common'
+//引入google追踪码
+import gtag from 'vue-gtag'
 
 const app = createApp(App)
 //定义全局变量
@@ -26,6 +28,7 @@ app.config.globalProperties.$goUrl = goUrl
 app.config.globalProperties.$sliceWord = sliceWord
 app.use(i18n)
 app.use(ElementPlus)
+app.use(gtag, {config: {id: import.meta.env.VITE_GA}}) //输入google追踪码
 app.component('layout_home', layout_home) //首页布局
 app.component('layout_default', layout_default) //内页布局
 app.use(router)
