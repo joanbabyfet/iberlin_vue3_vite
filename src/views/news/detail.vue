@@ -5,7 +5,7 @@
             <div id="innerBodyMain">
                 <div class="mainTitle titleBrand"><img src="@/assets/images/visual/pageTitle/news.png" width="200" height="35" /></div>
                 <div id="mainContents">
-                    <h2>{{ info.name }}</h2>
+                    <h2>{{ info.title }}</h2>
                     <p>{{ info.content }}</p>
                     <div class="files">
                         <ul>

@@ -7,10 +7,10 @@ export default function useHomeNews() {
 
     async function getList() {
         let data = {
-            'page': 1,
-            'page_size': 5,
+            'is_hot': 1,
+            'limit': 5,
         }
-        await getNews({ params: JSON.stringify(data) }).then((res) => {
+        await getNews(data).then((res) => {
             //console.log(res)
             if(res.code === 0) {
                 list.value = res.data.list

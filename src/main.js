@@ -22,7 +22,7 @@ import gtag from 'vue-gtag'
 
 const app = createApp(App)
 //定义全局变量
-const baseUrl = 'https://tsth5.example.local'
+const baseUrl = 'https://tsth5.synolux.local'
 app.config.globalProperties.$baseUrl = baseUrl
 app.config.globalProperties.$goUrl = goUrl
 app.config.globalProperties.$sliceWord = sliceWord

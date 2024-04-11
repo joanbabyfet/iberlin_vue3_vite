@@ -28,7 +28,10 @@ export default function() {
         contactForm.value.validate(async (valid) => {
             if(valid) {
                 //发送请求
-                submitContactForm(form.value).then(res => {
+                const headers = {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+                submitContactForm(form.value, headers).then(res => {
                     isDisabled.value = false
                     if(res.code === 0) {
                         ElMessage.success(res.msg)

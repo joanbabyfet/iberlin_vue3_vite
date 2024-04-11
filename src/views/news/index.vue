@@ -7,7 +7,7 @@
                 <div class="newsList">
                     <ul>
                         <li v-for="item in list" :key="item.id">
-                            <router-link :to="`/news/${item.id}`">{{ item.name }}</router-link>
+                            <router-link :to="`/news/${item.id}`">{{ item.title }}</router-link>
                         </li>
                     </ul>
                 </div>

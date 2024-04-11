@@ -2,16 +2,16 @@
 import request from '../utils/request'
 
 //获取新闻列表
-export const getNews = (params) => {
-    return request.get('/v1/example/index', {params: params})
+export const getNews = (params, headers) => {
+    return request.get('/v1/article', {params: params}, { headers })
 }
 
 //获取新闻详情
-export const getNewsInfo = (params) => {
-    return request.get('/v1/example/show', {params: params})
+export const getNewsInfo = (params, headers) => {
+    return request.get('/v1/article/detail', {params: params}, { headers })
 }
 
 //提交联络我们表单
-export const submitContactForm = (params) => {
-    return request.post('/v1/example/edit', {params: params})
+export const submitContactForm = (params, headers) => {
+    return request.post('/v1/feeback', params, { headers })
 }

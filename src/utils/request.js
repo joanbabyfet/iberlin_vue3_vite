@@ -10,6 +10,7 @@ const instance = axios.create({
 instance.interceptors.request.use(
     config => {
         //config.headers['Authorization'] = 'Bearer ' + Cookies.get( 'access_token')
+        console.log('请求参数:', config) //打印日志
         return config
     },
     error => {
@@ -19,9 +20,11 @@ instance.interceptors.request.use(
 //响应拦截器
 instance.interceptors.response.use(
     response => {
+        console.log('返回结果:', response) //打印日志
         return response.data
     },
     error => {
+        console.log('返回错误:', error) //打印日志
         return Promise.reject(error)
     }
 )
